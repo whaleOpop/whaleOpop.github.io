@@ -5,7 +5,7 @@
             }
             
             .description {
-                z-index: 1;
+                z-index: 0;
                 position: absolute;
                 font-size: calc(var(--sizeindex) * .8);
                 left: 8vw;
@@ -88,8 +88,10 @@
             }
             
             .slider__item {
+                z-index: 1;
                 border-radius: 25px;
                 max-height: 75vh;
+                max-width: 75vh;
                 overflow: hidden;
                 cursor: pointer;
                 transition: transform var(--transition), box-shadow var(--transition);
@@ -128,7 +130,6 @@
             }
             
             .slider__item.opened {
-                z-index: 2;
                 transform: scale(1.20) translateX(-30vh);
                 box-shadow: rgb(0 0 0 / .75) 0 0 0 10000px;
             }
